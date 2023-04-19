@@ -99,8 +99,6 @@ main {
   position: relative;
   z-index: 1;
 }
-
-
 /* Temas para el front-end y back-end */
     
 /* Temas para el front-end */
@@ -113,7 +111,6 @@ main {
     --console-text-color: #13A10E;
     --button-text-color: #fefae0; /* Nueva variable para el color del texto en los botones */
     --text-color: #333333;
-    --secondary-background-color: #e7c5bc;
     --link-color: #e76f51;
 }    
 /* Se definen los colores para el tema oscuro de front-end */
@@ -205,6 +202,16 @@ body.backend-theme.dark-mode {
     --link-color: #c591e3;
 }
 
+/* Estilos para menu hamburgueza */
+.hamburger{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
 
 /* Estilos para el header y la navegación */
 nav {
@@ -277,6 +284,10 @@ left: 0;
 
 .skills-selector{
   padding: 10px 0px;
+}
+
+.skill-button{
+  margin: .5rem;
 }
 
 button {
@@ -638,5 +649,43 @@ button:hover {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
+  }
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hamburger{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 2rem;
+    width: 90%;
+    height: 50px;
+    cursor: pointer;
+
+  }
+  .nav {
+    /* Estilos para pantallas pequeñas */
+    display: none;
+    flex-direction: column;
+  }
+  .nav-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Estilos específicos para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+      /* Estilos para pantallas medianas */
+  }
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 1025px) {
+  .header {
+      /* Estilos para pantallas grandes */
   }
 }
