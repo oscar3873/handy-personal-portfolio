@@ -205,11 +205,6 @@ body.backend-theme.dark-mode {
 /* Estilos para menu hamburgueza */
 .hamburger{
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
 }
 
 
@@ -581,6 +576,21 @@ button:hover {
   }
 }
 
+@keyframes nav-animation {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.nav-animate {
+  animation: nav-animation 0.5s normal;
+}
+
 .mancha {
   animation: deform1 30s infinite;
 }
@@ -654,27 +664,52 @@ button:hover {
 
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 768px) {
-  .hamburger{
+  .header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+  }
+  .hamburger {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    width: 90%;
+    width: 50px;
     height: 50px;
+    border-radius: 50%;
     cursor: pointer;
-
+    z-index: 999;
   }
   .nav {
     /* Estilos para pantallas pequeñas */
     display: none;
     flex-direction: column;
   }
+  .nav-open {
+    display: flex;
+    transition: all .3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+  
   .nav-container{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  
+  .nav-open .nav-container {
+    max-height: 500px; /* Ajusta este valor según el contenido del menú */
+  }
 }
+
 
 /* Estilos específicos para pantallas medianas */
 @media (min-width: 769px) and (max-width: 1024px) {

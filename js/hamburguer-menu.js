@@ -4,6 +4,6 @@ const hamburguerMenu = document.getElementById(hamburguer_name);
 const nav = document.querySelector(nav_name);
 
 hamburguerMenu.addEventListener('click', () => {
-    nav.style.display === 'flex'? nav.style.display = 'none' : nav.style.display = 'flex';
-    
+  nav.classList.toggle('nav-open');
+  nav.classList.toggle('nav-animate');
 });
