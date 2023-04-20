@@ -1,48 +1,56 @@
+// const consoleTextArray = [
+//     'soy un programador universitario con más de 5 años de experiencia en el desarrollo de aplicaciones web y móviles.',
+//     'tengo un perfil "full-stack", lo que significa que puedo trabajar en todas las áreas de un proyecto de software.',
+//   ];
+
 const consoleTextArray = [
-    'soy un programador universitario con más de 5 años de experiencia en el desarrollo de aplicaciones web y móviles.',
-    'tengo un perfil "full-stack", lo que significa que puedo trabajar en todas las áreas de un proyecto de software.',
-    'Desde la planificación y el diseño hasta la implementación y el mantenimiento.'
-  ];
+    "este portafolio se esta construyendo...",
+    "asi que por favor, regresa pronto."
+]
+
 const consoleElem = document.querySelector('.console');
 const prompt = 'C:\\oscar-vargas\\portafolio> ';
 
 let index = 0;
-let delay = 0;
 let textIndex = 0;
 
-function animateConsole() {
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const escribir = async () => {
 if (textIndex >= consoleTextArray.length) {
     textIndex = 0;
 }
 
-if (textIndex < consoleTextArray.length) {
-    const consoleText = consoleTextArray[textIndex];
-    if (index <= consoleText.length) {
+const consoleText = consoleTextArray[textIndex];
+
+while (index <= consoleText.length) {
     const char = consoleText.charAt(index);
-    if (char === '\n') {
-        delay = 1200 + Math.random() * 500;
-    } else {
-        delay = Math.random() * 80;
-    }
+    const delay = (char === '\n') ? (3000 + Math.random() * 700) : (Math.random() * 100);
+    await sleep(delay);
 
-    setTimeout(() => {
-        consoleElem.innerHTML = prompt + consoleText.slice(0, index) + '<span class="blink">|</span>';
-        index++;
-        animateConsole();
-    }, delay);
-    } else {
-    setTimeout(() => {
-        consoleElem.style.animation = 'delete 0.5s forwards';
-        setTimeout(() => {
-        consoleElem.style.animation = 'type 2s forwards';
-        index = 0;
-        textIndex++;
-        animateConsole();
-        }, 600);
-    }, 2000); // Tiempo de espera antes de borrar y escribir el siguiente texto del arreglo
-    }
-}
+    consoleElem.innerHTML = prompt + consoleText.slice(0, index) + '<span class="blink" style="color: white;">|</span>';
+    index++;
 }
 
-animateConsole();
+await sleep(4000);
+index = consoleText.length;
+await borrar();
+};
+
+const borrar = async () => {
+while (index >= 0) {
+    const delay = 0.5 * 50;
+    await sleep(delay);
+
+    consoleElem.innerHTML = prompt + consoleTextArray[textIndex].slice(0, index) + '<span class="blink" style="color: white;">|</span>';
+    index--;
+}
+
+// Restablece el índice de inicio de escritura a 0 antes de comenzar a escribir el siguiente texto en el arreglo.
+index = 0;
+
+textIndex++;
+await escribir();
+};
+
+escribir();
