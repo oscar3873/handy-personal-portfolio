@@ -6,4 +6,5 @@ const nav = document.querySelector(nav_name);
 hamburguerMenu.addEventListener('click', () => {
   nav.classList.toggle('nav-open');
   nav.classList.toggle('nav-animate');
+  nav.scrollIntoView({ behavior: 'smooth' });
 });
