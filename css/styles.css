@@ -358,9 +358,9 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-  }
+}
   
-  /* Estilos para la cabeza de la consola */
+/* Estilos para la cabeza de la consola */
 /* Estilos para la cabeza de la consola */
 .console-head {
     padding: 10px;
@@ -418,8 +418,44 @@ button:hover {
     white-space: pre-wrap;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-  }
+}
+
+.barra-tareas {
+  min-width: 700px;
+  padding: 10px;
+  overflow: auto;
+  transition: all 0.3s ease-in-out; 
+}
+
+.barra-tareas-iconos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  justify-items: center;
+  align-items: center;
   
+}
+
+
+.barra-tareas-icono {
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+  padding: .5rem;
+  border-radius: 10px;
+  transition: border-color 0.3s, background-color 0.3s; /* Añadir transición para el background-color */
+}
+
+.barra-tareas-icono:hover {
+  cursor: pointer;
+  border-color: currentColor;
+  background-color: rgba(238, 232, 232, 0.7);
+}
+.barra-tareas-icono.dark-mode:hover {
+  cursor: pointer;
+  border-color: currentColor;
+  background-color: rgba(238, 232, 232, 0.7);
+}
+
   /* Estilos para la animación de parpadeo */
   .blink {
     animation: blink 0.5s step-end infinite;
@@ -698,6 +734,15 @@ button:hover {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
   }
+
+  .barra-tareas {
+    min-width: 350px;
+    max-width: 350px;
+    padding: 10px;
+    overflow: auto;
+    transition: all 0.3s ease-in-out; 
+  }
+
 }
 
 /* Estilos específicos para pantallas pequeñas */
