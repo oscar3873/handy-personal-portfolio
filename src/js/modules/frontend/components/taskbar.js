@@ -1,4 +1,4 @@
-import { technologiesBack, technologiesFront } from './main.js';
+import { technologiesBack, technologiesFront } from '../../shared/main.js';
 
 const iconos = document.querySelector('.barra-tareas-iconos');
 export const skillButtons = document.querySelectorAll('.skill-button');

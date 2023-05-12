@@ -1,4 +1,4 @@
-import { body, themeSwitcher, skillButtons, applyTheme } from './theme.js';
+import { body, themeSwitcher, skillButtons, applyTheme } from '../frontend/theme.js';
 
 let currentTheme = 'frontend-theme';
 let darkMode = false;
