@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Estilos base y tipografía */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 /* Se define la fuente base para todo el sitio */
 body {
-    line-height: 1.6;
-    color: #333;
-    transition: background-color 0.3s;
+  line-height: 1.6;
+  color: #333;
+  transition: background-color 0.3s;
 }
-    
+
 /* Se define la fuente, el peso y el margen para todos los títulos */
-h1, h2, h3, h4, h5, h6 {
-font-weight: 800;
-margin: 0 0 1rem 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  margin: 0 0 1rem 0;
 }
 
 /* Sombra con degradado */
@@ -33,20 +38,49 @@ margin: 0 0 1rem 0;
 .box::before {
   border-radius: 5px;
   content: "";
-  position: absolute;	
+  position: absolute;
   inset: -4px;
-  background: conic-gradient(from 90deg at 40% -25%, var(--primary-color), var(--secondary-color), var(--secondary-color), var(--primary-color), var(--primary-color), var(--secondary-color), var(--secondary-color), var(--primary-color), var(--primary-color), var(--secondary-color), var(--secondary-color), var(--primary-color), var(--primary-color), var(--secondary-color), var(--secondary-color), var(--primary-color));
+  background: conic-gradient(
+    from 90deg at 40% -25%,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--secondary-color),
+    var(--primary-color),
+    var(--primary-color),
+    var(--secondary-color),
+    var(--secondary-color),
+    var(--primary-color),
+    var(--primary-color),
+    var(--secondary-color),
+    var(--secondary-color),
+    var(--primary-color),
+    var(--primary-color),
+    var(--secondary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
   filter: blur(10px);
-  transform: translate3d(5px,-1px,-1px);
-  clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,calc(4px - 5px) calc(4px - -1px),calc(4px - 5px) calc(100% - -1px - 4px),calc(100% - 5px - 4px) calc(100% - -1px - 4px),calc(100% - 5px - 4px) calc(4px - -1px),calc(4px - 5px) calc(4px - -1px));
+  transform: translate3d(5px, -1px, -1px);
+  clip-path: polygon(
+    -100vmax -100vmax,
+    100vmax -100vmax,
+    100vmax 100vmax,
+    -100vmax 100vmax,
+    -100vmax -100vmax,
+    calc(4px - 5px) calc(4px - -1px),
+    calc(4px - 5px) calc(100% - -1px - 4px),
+    calc(100% - 5px - 4px) calc(100% - -1px - 4px),
+    calc(100% - 5px - 4px) calc(4px - -1px),
+    calc(4px - 5px) calc(4px - -1px)
+  );
   pointer-events: none;
 }
 
-.presentation-section{
+.presentation-section {
   padding: 0rem 2rem;
 }
 
-.presentation-content{
+.presentation-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,10 +96,10 @@ margin: 0 0 1rem 0;
   object-fit: cover; /* Asegura que la imagen cubra todo el espacio asignado */
 }
 
-.presentation-title{
+.presentation-title {
   font-size: 2.5rem;
 }
-.presentation-subtitle{
+.presentation-subtitle {
   font-size: 1.5rem;
 }
 
@@ -100,41 +134,41 @@ main {
   z-index: 1;
 }
 /* Temas para el front-end y back-end */
-    
+
 /* Temas para el front-end */
 
 /* Se definen los colores para el tema de front-end */
 .frontend-theme {
-    --primary-color: #e76f51;
-    --secondary-color: #f4a261;
-    --background-color: #ffffff;
-    --console-text-color: #13A10E;
-    --button-text-color: #fefae0; /* Nueva variable para el color del texto en los botones */
-    --text-color: #333333;
-    --link-color: #e76f51;
-}    
+  --primary-color: #e76f51;
+  --secondary-color: #f4a261;
+  --background-color: #ffffff;
+  --console-text-color: #13a10e;
+  --button-text-color: #fefae0; /* Nueva variable para el color del texto en los botones */
+  --text-color: #333333;
+  --link-color: #e76f51;
+}
 /* Se definen los colores para el tema oscuro de front-end */
 
 .frontend-dark-theme {
---primary-color: #f4a261;
---secondary-color: #e76f51;
---background-color: #242325;
---text-color: #fefae0;
---secondary-background-color: #3A3A3A;
---link-color: #f4a261;
+  --primary-color: #f4a261;
+  --secondary-color: #e76f51;
+  --background-color: #242325;
+  --text-color: #fefae0;
+  --secondary-background-color: #3a3a3a;
+  --link-color: #f4a261;
 }
 
 /* Aplicar colores y tema para el front-end /
 / Se aplica el color de fondo correspondiente para cada tema */
 
 body.frontend-theme {
-background-color: var(--background-color);
-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body.frontend-dark-theme {
-background-color: var(--background-color);
-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Temas para el back-end */
@@ -142,165 +176,104 @@ color: var(--text-color);
 /* Se definen los colores para el tema de back-end */
 
 .backend-theme {
---primary-color: #2a9d8f;
---secondary-color: #c591e3;
---console-text-color: #13A10E;
---background-color: #ffffff;
---button-text-color: #fefae0;
---secondary-background-color: #c0ece7;
---text-color: #333333;
---link-color: #2a9d8f;
+  --primary-color: #2a9d8f;
+  --secondary-color: #c591e3;
+  --console-text-color: #13a10e;
+  --background-color: #ffffff;
+  --button-text-color: #fefae0;
+  --secondary-background-color: #c0ece7;
+  --text-color: #333333;
+  --link-color: #2a9d8f;
 }
 
 /* Se definen los colores para el tema oscuro de back-end */
 
 .backend-dark-theme {
---primary-color: #c591e3;
---secondary-color: #2a9d8f;
---background-color: #242325;
---secondary-background-color: #505050;
---text-color: #fefae0;
---link-color: #c591e3;
+  --primary-color: #c591e3;
+  --secondary-color: #2a9d8f;
+  --background-color: #242325;
+  --secondary-background-color: #505050;
+  --text-color: #fefae0;
+  --link-color: #c591e3;
 }
 
 /* Aplicar colores y tema para el back-end /
 / Se aplica el color de fondo correspondiente para cada tema */
 
 body.backend-theme {
-background-color: var(--background-color);
-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body.backend-dark-theme {
-background-color: var(--background-color);
-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Aplicar colores y tema /
 / Se aplica el color de fondo y el color de texto del tema correspondiente */
 
 body {
-background-color: var(--background-color);
-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body.frontend-theme.dark-mode {
-    --primary-color: #f4a261;
-    --secondary-color: #e76f51;
-    --background-color: #242325;
-    --secondary-background-color: #725e4e;
-    --text-color: #fefae0;
-    --link-color: #f4a261;
+  --primary-color: #f4a261;
+  --secondary-color: #e76f51;
+  --background-color: #242325;
+  --secondary-background-color: #725e4e;
+  --text-color: #fefae0;
+  --link-color: #f4a261;
 }
 
 body.backend-theme.dark-mode {
-    --primary-color: #c591e3;
-    --secondary-color: #2a9d8f;
-    --background-color: #242325;
-    --secondary-background-color: #9789a0;
-    --text-color: #fefae0;
-    --link-color: #c591e3;
-}
-
-/* Estilos para menu hamburgueza */
-.hamburger{
-  display: none;
+  --primary-color: #c591e3;
+  --secondary-color: #2a9d8f;
+  --background-color: #242325;
+  --secondary-background-color: #9789a0;
+  --text-color: #fefae0;
+  --link-color: #c591e3;
 }
 
 
-/* Estilos para el header y la navegación */
-nav {
-    display: flex;
-    justify-content: space-between; /* Alinea el logotipo a la izquierda y el contenedor de enlaces a la derecha */
-    align-items: center; /* Alinea verticalmente los elementos */
-    padding: 10px 20px; /* Agrega un espacio alrededor del header */
-}
 
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Define la separación entre los elementos del contenedor */
-}
-
-.nav-link{
-  font-weight: 700;
-  position: relative;
-  color: var(--link-color);
-  text-decoration: none;
-  overflow: hidden;
-  transition: color 0.3s;
-  display: inline-block; /* Se agrega para que el ancho del enlace se ajuste al contenido */
-}
-
-/* Animación de subrayado para enlaces */
-/* Se añade una animación para el subrayado al pasar el ratón por encima */
-
-.logotipo {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Se define el estilo del subrayado */
-
-.nav-link::before {
-content: '';
-position: absolute;
-width: 0;
-height: 2px;
-bottom: 0;
-left: 100%;
-background-color: var(--link-color);
-transition: all 0.3s;
-transform: translateX(0%);
-z-index: -1; /* Se establece un z-index negativo para que el subrayado quede detrás del texto */
-}
-    
-/* Se agranda el subrayado al pasar el ratón por encima */
-
-a:hover::before {
-width: 100%;
-left: 0;
-}
-
-#presentacion{
+#presentacion {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-
 /* Estilos mejorados para botones /
 / Se definen los estilos para botones */
 
-.skills-selector{
+.skills-selector {
   padding: 10px 0px;
 }
 
-.skill-button{
-  margin: .5rem;
+.skill-button {
+  margin: 0.5rem;
 }
 
 button {
-    background-color: var(--primary-color);
-    color: var(--button-text-color); /* Usar la nueva variable para el color del texto */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    border-radius: 5px; /* Redondea los bordes de los botones */
+  background-color: var(--primary-color);
+  color: var(
+    --button-text-color
+  ); /* Usar la nueva variable para el color del texto */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  border-radius: 5px; /* Redondea los bordes de los botones */
 }
 
 /* Agrega una sombra minimalista e increíble en el hover */
 button:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-rounded:hover{
+.btn-rounded:hover {
   box-shadow: none;
 }
 
@@ -329,7 +302,6 @@ button:hover {
   transform-origin: center;
 }
 
-
 .sun {
   padding: 2em 0em;
   transform: translateY(0);
@@ -348,83 +320,20 @@ button:hover {
   transform: translateY(0);
 }
 
-
-
-
 /* Estilos para el main notebook autoescritura */
 .computer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-  
-/* Estilos para la cabeza de la consola */
-/* Estilos para la cabeza de la consola */
-.console-head {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-width: 700px;
-    min-height: 20px;
-    max-width: 700px;
-    max-height: 20;
-    background-color: var(--primary-color);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-  }
-  
-  /* Estilos para el contenedor de los botones */
-  .console-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 1; /* Agregado para centrar horizontalmente los botones */
-  }
-  
-  /* Estilos para los botones de la consola */
-  .console-button {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    color: #fff;
-    text-align: center;
-    line-height: 20px;
-  }
-  
-  
-  /* Estilos para la consola */
-  .console {
-    margin: auto;
-    min-width: 700px;
-    min-height: 200px;
-    max-width: 700px;
-    max-height: 200px;
-    background-color: #070F0F;
-    color: var(--console-text-color); 
-    font-family: 'Lucida Console', monospace;
-    font-size: 16px;
-    font-weight: normal;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow-y: hidden;
-    white-space: pre-wrap;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
 .barra-tareas {
   min-width: 700px;
   padding: 10px;
   overflow: auto;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
 
 .barra-tareas-iconos {
@@ -432,15 +341,13 @@ button:hover {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
-  
 }
-
 
 .barra-tareas-icono {
   width: 50px;
   height: 50px;
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 10px;
   transition: border-color 0.3s, background-color 0.3s; /* Añadir transición para el background-color */
 }
@@ -456,113 +363,87 @@ button:hover {
   background-color: rgba(238, 232, 232, 0.7);
 }
 
-  /* Estilos para la animación de parpadeo */
-  .blink {
-    animation: blink 0.5s step-end infinite;
+/* Estilos para la animación de parpadeo */
+.blink {
+  animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  
-  /* Estilos generales para el pie de página */
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-/* Estilos para la navegación del pie de página */
-.footer-nav {
-  display: flex;
-  flex-direction: column;
 }
 
-/* Estilos para la lista de navegación del pie de página */
-.footer-nav-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-/* Estilos para los elementos de la lista de navegación del pie de página */
-.footer-nav-list-item {
-  margin: 0.5rem;
-}
-
-/* Estilos para el párrafo de derechos de autor */
-.footer p {
-  font-size: 0.875rem;
-  color: #6c757d;
-}
-
-.footer-icons{
-  width: 30px;
-  height: 50px;
-}
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
+/* Estilos para la animación de escritura */
+@keyframes type {
+  from {
+    width: 0;
   }
-  
-  /* Estilos para la animación de escritura */
-  @keyframes type {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
-  
-  /* Estilos para la animación de borrado */
-  @keyframes delete {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 0;
-    }
+}
+
+/* Estilos para la animación de borrado */
+@keyframes delete {
+  from {
+    width: 100%;
   }
-  /* Animación 1: curva hacia abajo */
+  to {
+    width: 0;
+  }
+}
+/* Animación 1: curva hacia abajo */
 @keyframes curve-down {
   0% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z"
+    );
   }
   50% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,373,148,400c66,40,331,-162.1,491,-308C901,243,1280,196,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,373,148,400c66,40,331,-162.1,491,-308C901,243,1280,196,1211,400Z"
+    );
   }
   100% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z"
+    );
   }
 }
 
 /* Animación 2: curva hacia arriba */
 @keyframes curve-up {
   0% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z"
+    );
   }
   50% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,826,148,400c66,-266,331,-866.1,491,-620C901,657,1280,149,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,826,148,400c66,-266,331,-866.1,491,-620C901,657,1280,149,1211,400Z"
+    );
   }
   100% {
-      d: path("M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z");
+    d: path(
+      "M1211,400c-48.75,177.33-238,333-531.5,333S87.37,573.63,148,400c66-189,331,292.1,491,46C901,43,1280,149,1211,400Z"
+    );
   }
 }
 
 /* Animación 3: cambio de color y tamaño */
 @keyframes color-and-size {
   0% {
-      fill: var(--secondary-background-color);
-      transform: scale(1);
+    fill: var(--secondary-background-color);
+    transform: scale(1);
   }
   50% {
-      fill: blue;
-      transform: scale(1.2);
+    fill: blue;
+    transform: scale(1.2);
   }
   100% {
-      fill: var(--secondary-background-color);
-      transform: scale(1);
+    fill: var(--secondary-background-color);
+    transform: scale(1);
   }
 }
 /* Animaciones y clases para gravedad y demas */
@@ -591,7 +472,6 @@ button:hover {
   }
 }
 
-
 @keyframes scroll-animation-y {
   0% {
     transform: translateY(100%);
@@ -615,7 +495,11 @@ button:hover {
 }
 
 @keyframes bounce-animation {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(0);
   }
   40% {
@@ -702,104 +586,22 @@ button:hover {
   animation-iteration-count: 1;
 }
 
-
 /* ------------------------------------ */
-
 
 /* Media queries */
 
 @media screen and (max-width: 1024px) {
   #presentacion {
-  flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .console-head {
-    min-width: 350px;
-    max-width: 350px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-  }
-  
-  .console {
-    min-width: 350px;
-    max-width: 350px;
-    font-size: 14px;
-    padding: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-
   .barra-tareas {
     min-width: 350px;
     max-width: 350px;
     padding: 10px;
     overflow: auto;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
   }
-
-}
-
-/* Estilos específicos para pantallas pequeñas */
-@media (max-width: 768px) {
-  .header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    width: 100%;
-  }
-  .hamburger {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 999;
-  }
-  .nav {
-    /* Estilos para pantallas pequeñas */
-    display: none;
-    flex-direction: column;
-  }
-  .nav-open {
-    display: flex;
-    transition: all .3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  }
-  
-  .nav-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav-open .nav-container {
-    max-height: 500px; /* Ajusta este valor según el contenido del menú */
-  }
-}
-
-
-/* Estilos específicos para pantallas medianas */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-/* Estilos específicos para pantallas grandes */
-@media (min-width: 1025px) {
-
 }

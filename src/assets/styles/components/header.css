@@ -1,0 +1,162 @@
+/* Estilos para menu hamburgueza */
+.hamburger {
+  display: none;
+}
+
+/* Estilos para el header y la navegación */
+nav {
+  display: flex;
+  justify-content: space-between; /* Alinea el logotipo a la izquierda y el contenedor de enlaces a la derecha */
+  align-items: center; /* Alinea verticalmente los elementos */
+  padding: 10px 20px; /* Agrega un espacio alrededor del header */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Define la separación entre los elementos del contenedor */
+}
+
+.nav-link {
+  font-weight: 700;
+  position: relative;
+  color: var(--link-color);
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s;
+  display: inline-block; /* Se agrega para que el ancho del enlace se ajuste al contenido */
+}
+
+/* Animación de subrayado para enlaces */
+/* Se añade una animación para el subrayado al pasar el ratón por encima */
+
+.logotipo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Se define el estilo del subrayado */
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 100%;
+  background-color: var(--link-color);
+  transition: all 0.3s;
+  transform: translateX(0%);
+  z-index: -1; /* Se establece un z-index negativo para que el subrayado quede detrás del texto */
+}
+
+/* Se agranda el subrayado al pasar el ratón por encima */
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .hamburger {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .nav {
+    /* Esconde el menu principal y ajusta su dirección para pantallas pequeñas */
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-open {
+    /* Muestra el menu principal al abrirlo y le agrega transición */
+    display: flex;
+    transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+
+  .nav-container {
+    /* Ajusta la alineación del contenido del menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-open .nav-container {
+    /* Ajusta la altura máxima del menu principal */
+    max-height: 500px; /* Ajusta este valor según el contenido del menú */
+  }
+}
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+  }
+  .hamburger {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .nav {
+    /* Estilos para pantallas pequeñas */
+    display: none;
+    flex-direction: column;
+  }
+  .nav-open {
+    display: flex;
+    transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-open .nav-container {
+    max-height: 500px; /* Ajusta este valor según el contenido del menú */
+  }
+}

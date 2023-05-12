@@ -1,0 +1,80 @@
+/* Estilos para la cabeza de la consola */
+/* Estilos para la cabeza de la consola */
+.console-head {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 700px;
+  min-height: 20px;
+  max-width: 700px;
+  max-height: 20;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* Estilos para el contenedor de los botones */
+.console-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1; /* Agregado para centrar horizontalmente los botones */
+}
+
+/* Estilos para los botones de la consola */
+.console-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Estilos para la consola */
+.console {
+  margin: auto;
+  min-width: 700px;
+  min-height: 200px;
+  max-width: 700px;
+  max-height: 200px;
+  background-color: #070f0f;
+  color: var(--console-text-color);
+  font-family: "Lucida Console", monospace;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: hidden;
+  white-space: pre-wrap;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .console-head {
+    min-width: 350px;
+    max-width: 350px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .console {
+    min-width: 350px;
+    max-width: 350px;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}
