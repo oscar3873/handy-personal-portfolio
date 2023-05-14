@@ -78,16 +78,18 @@ h6 {
 }
 
 .presentation-section {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
+  padding: 0px 0px 20rem 0px;
 }
 
 .presentation-content {
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(0%, 60%);
   width: 100%;
   max-width: 500px;
   display: flex;
