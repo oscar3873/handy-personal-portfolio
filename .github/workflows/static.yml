@@ -23,6 +23,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  # index.html in src directory
   deploy:
     environment:
       name: github-pages
@@ -31,8 +32,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Move to src directory
-        run: cd src
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
