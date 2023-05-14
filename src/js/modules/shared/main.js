@@ -35,3 +35,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   applyTheme(currentTheme, darkMode);
 });
+
+//Animaciones
+const subtitle = document.querySelector('.presentation-subtitle');
+
+function animateSubtitle() {
+  subtitle.classList.add('animate');
+}
+
+// Activamos la animación cuando el elemento está en el viewport
+window.addEventListener('scroll', () => {
+  const elementPosition = subtitle.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (elementPosition < screenHeight * 0.8) {
+    animateSubtitle();
+  }
+});

@@ -1,0 +1,94 @@
+#logotipo-loadScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-indicator {
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+}
+
+
+.frontend,
+.backend {
+  fill: none;
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill-opacity: 0;
+}
+
+.frontend {
+  stroke: #e76f51;
+  animation: moveLeft 1s ease forwards, draw 2s ease forwards,
+    fill 1s ease forwards 0.5s; /* retrasamos esta animación en 2s */
+}
+
+.backend {
+  stroke: #2a9d8f;
+  animation: moveRight 1s ease forwards, draw 2s ease forwards 0.5s,
+    fill 1s ease forwards 0.5s; /* retrasamos esta animación en 3s */
+}
+
+@keyframes fill {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Animacion sobre el eje x para que frontend arranque puntos hacia la izquierda y backend arranque puntos hacia la derecha pero que vuelva a su posicion original al finalizar*/
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-100px);
+    transform: translateY(0px)
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: translateY(-4rem)
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translate3d(100px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -4rem, 0);
+  }
+}

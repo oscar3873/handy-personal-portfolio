@@ -1,9 +1,16 @@
-/* Estilos para la cabeza de la consola */
+/* Estilos para el main notebook autoescritura */
+.computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
 /* Estilos para la cabeza de la consola */
 .console-head {
   padding: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   min-width: 700px;
   min-height: 20px;
@@ -20,7 +27,7 @@
 .console-buttons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-grow: 1; /* Agregado para centrar horizontalmente los botones */
 }
 
@@ -35,6 +42,41 @@
   color: #fff;
   text-align: center;
   line-height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Estilos para el botón de cerrar */
+#console-close {
+  background-color: #ff5f56;
+}
+
+/* Estilos para el botón de minimizar */
+#console-minimize {
+  background-color: #ffbd2e;
+}
+
+/* Estilos para el botón de maximizar */
+#console-maximize {
+  background-color: #27c93f;
+}
+
+/* Estilos basados en la consola de mac para el titulo de la consola */
+.console-title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Estilos para la consola */
@@ -58,6 +100,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .console-head {
     min-width: 350px;
     max-width: 350px;

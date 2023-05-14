@@ -1,119 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta name="description" content="Portafolio de Oscar Vargas" />
+    <meta
+      name="keywords"
+      content="Oscar Vargas, Portafolio, Desarrollador Web, Desarrollador Frontend, Desarrollador Backend, Desarrollador Fullstack"
+    />
+    <meta name="author" content="Oscar Vargas" />
+    <meta property="og:title" content="Oscar Vargas - Portafolio" />
+    <meta property="og:description" content="Portafolio de Oscar Vargas" />
+    <meta property="og:image" content="assets/images/logotipo.png" />
+    <meta property="og:url" content="https://oscarvargas.tk" />
+    <meta property="og:site_name" content="Oscar Vargas - Portafolio" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="assets/images/logotipo-oscar.svg" />
+
+    <link rel="stylesheet" href="assets/styles/main.css"/>
+    <link rel="stylesheet" href="assets/styles/components/load_screen.css"/>
+    <link rel="stylesheet" href="assets/styles/components/header.css"/>
+    <link rel="stylesheet" href="assets/styles/components/footer.css"/>
+    <link rel="stylesheet" href="assets/styles/components/console.css"/>
     <title>Oscar Vargas - Portafolio</title>
-    <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="stylesheet" href="assets/styles/components/header.css">
-    <link rel="stylesheet" href="assets/styles/components/console.css">
-    <link rel="stylesheet" href="assets/styles/components/footer.css">
-</head>
-<body class="body">      
+  </head>
+
+  <body class="body">
+    <!-- Loading screen -->
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-indicator">
+        <svg
+          id="logotipo-loadScreen"
+          data-name="logotipo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 250.56 147.48"
+        >
+          <g id="logo-design" data-name="figura">
+            <path
+              id="frontend"
+              data-name="frontend"
+              class="frontend"
+              d="M130.28,167.62c-1.42-2.77-4.06-4.62-6.47-6.45a113.54,113.54,0,0,1-15.9-14.7c-4.12-4.6-9.22-9.36-9.93-15.84-.73-6.66,3-12.34,7.41-16.95,4.59-4.82,9.52-9.34,14.23-14,6.67-6.67,13.34-13.32,20-20s19.33-2.12,25,3.59c4.91,4.91,9,13.48,5.71,20.42-2.07,4.45-6.3,7.59-9.72,11-5.8,5.71-11.45,11.57-17.06,17.47-4.65,4.9-10.64,9.4-13.68,15.56C126.76,154,128.23,161.19,130.28,167.62Z"
+              transform="translate(-24.58 -76.26)"
+            />
+            <path
+              id="backend"
+              data-name="backend"
+              class="backend"
+              d="M137.58,148.68c-3,5.41-3.25,14.89.42,20,7.39,10.25,20.9,4.73,28.31-2.26,5.09-4.81,9.69-10.16,14.72-15,6.4-6.2,12.8-12.45,18.39-19.41,5.36-6.66,1.8-16-2.72-22.28a17.84,17.84,0,0,0-8.33-6.47c-1.83-.65-12-2-12.25-.22-1.34,7.68-6.78,12.38-11.91,17.71-5.32,5.54-11,10.77-16.38,16.21C144.18,140.56,140.1,144.11,137.58,148.68Z"
+              transform="translate(-24.58 -76.26)"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!-- Fin loading screen -->
     <header class="header">
-        <button id="hamburger-menu" class="hamburger">&#9776;</button>
-        <nav class="nav">
-            <a href="" class="logotipo">
-                <!-- Logotipo -->
-                <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.56 147.48"><defs><style>.frontend{fill:#e76f51;}.backend{fill:#2a9d8f;}</style></defs>
-                    <g id="f985dbc6-514c-48c4-9d6f-911d886a5784" data-name="figura">
-                        <path id="frontend" data-name="frontend" class="frontend" d="M130.28,167.62c-1.42-2.77-4.06-4.62-6.47-6.45a113.54,113.54,0,0,1-15.9-14.7c-4.12-4.6-9.22-9.36-9.93-15.84-.73-6.66,3-12.34,7.41-16.95,4.59-4.82,9.52-9.34,14.23-14,6.67-6.67,13.34-13.32,20-20s19.33-2.12,25,3.59c4.91,4.91,9,13.48,5.71,20.42-2.07,4.45-6.3,7.59-9.72,11-5.8,5.71-11.45,11.57-17.06,17.47-4.65,4.9-10.64,9.4-13.68,15.56C126.76,154,128.23,161.19,130.28,167.62Z" transform="translate(-24.58 -76.26)"/>
-                        <path id="backend" data-name="backend" class="backend" d="M137.58,148.68c-3,5.41-3.25,14.89.42,20,7.39,10.25,20.9,4.73,28.31-2.26,5.09-4.81,9.69-10.16,14.72-15,6.4-6.2,12.8-12.45,18.39-19.41,5.36-6.66,1.8-16-2.72-22.28a17.84,17.84,0,0,0-8.33-6.47c-1.83-.65-12-2-12.25-.22-1.34,7.68-6.78,12.38-11.91,17.71-5.32,5.54-11,10.77-16.38,16.21C144.18,140.56,140.1,144.11,137.58,148.68Z" transform="translate(-24.58 -76.26)"/>
-                    </g>
-                </svg>
-                <!-- Fin logotipo -->
-            </a>
-            <div class="nav-container">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#proyectos" class="nav-link">Proyectos</a>
-                <a href="#educacion" class="nav-link">Educacion</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-                <button class="btn-rounded" id="theme-switcher">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
-                </button>
-            </div>
-        </nav>
+      <button id="hamburger-menu" class="hamburger">&#9776;</button>
+      <nav class="nav">
+        <a href="/" class="logotipo">
+          <!-- Logotipo -->
+          <svg
+            id="logotipo"
+            data-name="logotipo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 250.56 147.48"
+          >
+            <defs>
+              <style>
+                .frontend {
+                  fill: #e76f51;
+                }
+
+                .backend {
+                  fill: #2a9d8f;
+                }
+              </style>
+            </defs>
+            <g id="f985dbc6-514c-48c4-9d6f-911d886a5784" data-name="figura">
+              <path
+                id="frontend"
+                data-name="frontend"
+                class="frontend"
+                d="M130.28,167.62c-1.42-2.77-4.06-4.62-6.47-6.45a113.54,113.54,0,0,1-15.9-14.7c-4.12-4.6-9.22-9.36-9.93-15.84-.73-6.66,3-12.34,7.41-16.95,4.59-4.82,9.52-9.34,14.23-14,6.67-6.67,13.34-13.32,20-20s19.33-2.12,25,3.59c4.91,4.91,9,13.48,5.71,20.42-2.07,4.45-6.3,7.59-9.72,11-5.8,5.71-11.45,11.57-17.06,17.47-4.65,4.9-10.64,9.4-13.68,15.56C126.76,154,128.23,161.19,130.28,167.62Z"
+                transform="translate(-24.58 -76.26)"
+              />
+              <path
+                id="backend"
+                data-name="backend"
+                class="backend"
+                d="M137.58,148.68c-3,5.41-3.25,14.89.42,20,7.39,10.25,20.9,4.73,28.31-2.26,5.09-4.81,9.69-10.16,14.72-15,6.4-6.2,12.8-12.45,18.39-19.41,5.36-6.66,1.8-16-2.72-22.28a17.84,17.84,0,0,0-8.33-6.47c-1.83-.65-12-2-12.25-.22-1.34,7.68-6.78,12.38-11.91,17.71-5.32,5.54-11,10.77-16.38,16.21C144.18,140.56,140.1,144.11,137.58,148.68Z"
+                transform="translate(-24.58 -76.26)"
+              />
+            </g>
+          </svg>
+          <!-- Fin logotipo -->
+        </a>
+        <ul class="nav-container">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#educacion" class="nav-link">Educacion</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contacto" class="nav-link">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn-rounded" id="theme-switcher">
+              <span class="sun">☀️</span>
+              <span class="moon">🌙</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="content-wrapper">
-        <main>
-            <section class="presentation-section" id="presentacion">
-                <div class="presentation-content">
-                    <img src="assets/images/laptop_png.png" alt="perfil" class="presentation-image">
-                    <h1 class="presentation-title animated-text-buttom-top">Oscar Vargas</h1>
-                    <p class="presentation-subtitle animated-text-left-right">Desarrollador web y movil</p>
-                    <div class="skills-selector">
-                        <button class="skill-button" data-skill="frontend">Front-end</button>
-                        <button class="skill-button" data-skill="backend">Back-end</button>
-                    </div>
-                </div>
-                <div class="computer">
-                    <div class="console-head">
-                        <div class="console-buttons">
-                            <div class="console-button"></div>
-                            <div class="console-button"></div>
-                            <div class="console-button"></div>
-                        </div>
-                    </div>
-                    <!-- Aquí puedes agregar una ilustración o imagen de una computadora con una consola que te presente -->
-                    <div class="console"></div>
-                    <div class="barra-tareas">
-                        <div class="barra-tareas-iconos">
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="proyectos">
-                <h2>Proyectos</h2>
-                <article>En construccion...
-                </article>
-                <article>En construccion...
-                </article>
-                <article>En construccion...</article>
-                <!-- Agrega tus proyectos aquí -->
-            </section>
-            <section id="educacion">
-                <!-- Circulo -->
-                <!-- <svg class="curved-line corner-top-left" viewBox="0 0 100 100">
+      <main>
+        <section class="presentation-section" id="presentacion">
+          <div class="computer">
+            <div class="console-head">
+              <div class="console-buttons">
+                <div id="console-close" class="console-button"></div>
+                <div id="console-minimize" class="console-button"></div>
+                <div id="console-maximize" class="console-button"></div>
+              </div>
+              <div class="console-title">
+                <span class="console-title-text">oscar -- bash   /Portfolio/</span>
+              </div>
+            </div>
+            <!-- Aquí puedes agregar una ilustración o imagen de una computadora con una consola que te presente -->
+            <div class="console"></div>
+            <!-- <div class="barra-tareas">
+              <div class="barra-tareas-iconos"></div>
+            </div> -->
+          </div>
+          <div class="presentation-content">
+            <img
+              src="assets/images/laptop_png.png"
+              alt="perfil"
+              class="presentation-image"
+            />
+            <h1 class="presentation-title animated-text-buttom-top">
+              Oscar Vargas
+            </h1>
+            <p class="presentation-subtitle animated-text-left-right">
+              Desarrollador web y movil
+            </p>
+            <div class="skills-selector">
+              <button class="skill-button" data-skill="frontend">
+                Front-end
+              </button>
+              <button class="skill-button" data-skill="backend">
+                Back-end
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="proyectos">
+          <h2>Proyectos</h2>
+          <article>En construccion...</article>
+          <article>En construccion...</article>
+          <article>En construccion...</article>
+          <!-- Agrega tus proyectos aquí -->
+        </section>
+        <section id="educacion">
+          <!-- Circulo -->
+          <!-- <svg class="curved-line corner-top-left" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="40" fill="var(--secondary-background-color)"/>
                 </svg>-->
-                <h2>Educacion</h2>
-                <article>
-                    En construccion...
-                </article>
-            </section>
-        </main>
-        <footer id="contacto" class="footer">
-            <h2>Contacto</h2>
-            <nav class="footer-nav">
-                <ul class="footer-nav-list">
-                    <li class="footer-nav-list-item">
-                        <a href="mailto:oscarprogrammer007@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <img class="footer-icons" src="assets/images/gmail-icon.svg" alt="logo-gmail">
-                        </a>
-                    </li>
-                    <li class="footer-nav-list-item">
-                        <a href="https://www.linkedin.com/in/oscar-vargas-428618110/" target="_blank" rel="noopener noreferrer">
-                            <img class="footer-icons" src="assets/images/linkedin-icon.svg" alt="logo-linkedin">
-                        </a>
-                    </li>
-                    <li class="footer-nav-list-item">
-                        <a href="https://github.com/oscar3873" target="_blank" rel="noopener noreferrer">
-                            <img class="footer-icons" src="assets/images/github-icon.svg" alt="logo-github">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <p>&copy; Oscar Fernando Vargas - Todos los derechos reservados.</p>
-        </footer>
+          <h2>Educacion</h2>
+          <article>En construccion...</article>
+        </section>
+      </main>
+      <footer id="contacto" class="footer">
+        <h2>Contacto</h2>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-list-item">
+              <a
+                href="mailto:oscarprogrammer007@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+              >
+                <img
+                  class="footer-icons"
+                  src="assets/images/gmail-icon.svg"
+                  alt="logo de Gmail"
+                />
+              </a>
+            </li>
+            <li class="footer-nav-list-item">
+              <a
+                href="https://www.linkedin.com/in/oscar-vargas-428618110/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img
+                  class="footer-icons"
+                  src="assets/images/linkedin-icon.svg"
+                  alt="logo de LinkedIn"
+                />
+              </a>
+            </li>
+            <li class="footer-nav-list-item">
+              <a
+                href="https://github.com/oscar3873"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <img
+                  class="footer-icons"
+                  src="assets/images/github-icon.svg"
+                  alt="logo de GitHub"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address>
+          <p>&copy; Oscar Fernando Vargas - Todos los derechos reservados.</p>
+        </address>
+      </footer>
     </div>
-
     <script src="js/modules/shared/main.js" type="module"></script>
-	<script src="js/modules/frontend/components/console.js" type="module"></script>
-	<script src="js/modules/backend/gravity.js" type="module"></script>
-	<script src="js/modules/frontend/hamburguer-menu.js" type="module"></script>
-	<script src="js/modules/frontend/components/taskbar.js" type="module"></script>
-	<script src="js/modules/frontend/theme.js" type="module"></script>
-</body>
+    <script src="js/modules/backend/components/load_screen.js" type="module" ></script>
+    <script src="js/modules/frontend/theme.js" type="module"></script>
+    <script src="js/modules/frontend/hamburguer-menu.js" type="module"></script>
+    <script src="js/modules/frontend/components/console.js" type="module"></script>
+    <script src="js/modules/frontend/components/taskbar.js" type="module"></script>
+  </body>
 </html>

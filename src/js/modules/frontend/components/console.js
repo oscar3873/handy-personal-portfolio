@@ -9,7 +9,8 @@ const consoleTextArray = [
 ]
 
 const consoleElem = document.querySelector('.console');
-const prompt = 'C:\\oscar-vargas\\portafolio> ';
+//prompt basado en terminal mac
+const prompt = '👨‍💻:~$ ';
 
 let index = 0;
 let textIndex = 0;
