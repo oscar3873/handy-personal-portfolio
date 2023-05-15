@@ -5,11 +5,11 @@ window.addEventListener("load", function () {
 
 function hideLoadingScreen() {
   const loadingScreen = document.getElementById("loadingScreen");
-  // loadingScreen.style.display = "none";
+  loadingScreen.style.display = "none";
 
-  setTimeout(() => {
-    loadingScreen.style.display = "none";
-  }, 1000);
+  // setTimeout(() => {
+  //   loadingScreen.style.display = "none";
+  // }, 1000);
 }
 
 // function setTransformOrigin() {
