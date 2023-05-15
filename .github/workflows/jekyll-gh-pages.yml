@@ -37,8 +37,6 @@ jobs:
         with:
           source: ./src
           destination: ./_site
-      - name: Move _site contents to root
-        run: mv ./src/_site/* .
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
