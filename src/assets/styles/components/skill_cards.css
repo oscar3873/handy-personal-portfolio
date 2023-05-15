@@ -1,0 +1,57 @@
+.skill-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* ajusta este valor a tus necesidades (space-between, space-around, center, etc.) */
+  row-gap: 1rem; /* ajusta este valor a tus necesidades */
+  column-gap: 1rem; /* ajusta este valor a tus necesidades */
+}
+
+.skill-card {
+  padding: 1rem;
+  position: relative;
+  opacity: 1;
+  transition: opacity, transform 0.5s ease-in-out;
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+  background-color: var(--transparent-background-color);
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  right: -1rem;
+  width: 30%;
+  height: 30%;
+  z-index: -1;
+  background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color), transparent);
+  opacity: 0.3;
+  filter: blur(20px);
+}
+
+
+
+.skill-icon{
+  position: absolute;
+  top: -1.2rem;
+  right: -1rem;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-card {
+    flex-basis: calc(
+      50% - 2rem
+    ); /* En pantallas más anchas, permite que dos tarjetas caben en una fila */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill-card {
+    flex-basis: calc(
+      33.33% - 2rem
+    ); /* En pantallas aún más anchas, permite que tres tarjetas caben en una fila */
+  }
+}

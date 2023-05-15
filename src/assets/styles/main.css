@@ -28,6 +28,18 @@ h6 {
   margin: 0 0 1rem 0;
 }
 
+/* Animacion para contenido */
+
+.fade-in {
+  opacity: 0;
+  transform: translateX(-10rem);
+  transition-property: opacity, transform;
+  transition-duration: 2.5s;
+  transition-timing-function: ease-in-out;
+}
+
+
+
 /* Sombra con degradado */
 
 .box {
@@ -187,6 +199,7 @@ main {
   --button-text-color: #ffffff; /* Nueva variable para el color del texto en los botones */
   --text-color: #333333;
   --link-color: #e76f51;
+  --transparent-background-color: rgba(158, 153, 153, 0.1);
 }
 /* Se definen los colores para el tema oscuro de front-end */
 
@@ -197,6 +210,7 @@ main {
   --text-color: #fefae0;
   --secondary-background-color: #3a3a3a;
   --link-color: #f4a261;
+  --transparent-background-color: rgba(158, 153, 153, 0.1);
 }
 
 /* Aplicar colores y tema para el front-end /
@@ -225,6 +239,7 @@ body.frontend-dark-theme {
   --secondary-background-color: #c0ece7;
   --text-color: #333333;
   --link-color: #2a9d8f;
+  --transparent-background-color: rgba(158, 153, 153, 0.1);
 }
 
 /* Se definen los colores para el tema oscuro de back-end */
@@ -236,6 +251,7 @@ body.frontend-dark-theme {
   --secondary-background-color: #505050;
   --text-color: #fefae0;
   --link-color: #c591e3;
+  --transparent-background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Aplicar colores y tema para el back-end /
@@ -401,6 +417,27 @@ button:hover {
 /* Estilos para la animación de parpadeo */
 .blink {
   animation: blink 0.5s step-end infinite;
+}
+
+#skills{
+  display: flex;
+  flex-direction: column; /* Esto es opcional ya que 'row' es el valor por defecto de 'flex-direction' */
+}
+
+.skill-presentacion {
+  width: 100%;
+  margin: 2rem;
+  flex-basis: 100%; /* Ocupa todo el espacio en pantallas pequeñas */
+}
+
+.skill-presentacion > p{
+  margin-bottom: 2rem;
+}
+
+.skill-aside {
+  width: 100%;
+  margin: 2rem;
+  flex-basis: 100%; /* Ocupa todo el espacio en pantallas pequeñas */
 }
 
 @keyframes blink {
@@ -642,5 +679,29 @@ button:hover {
     padding: 10px;
     overflow: auto;
     transition: all 0.3s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 768px) { /* Ajusta este valor a tus necesidades */
+  #skills {
+    flex-direction: row; /* Los elementos se alinean horizontalmente en pantallas medianas y grandes */
+  }
+
+  .skill-presentacion {
+    flex-basis: 50%; /* Ocupa la mitad del espacio en pantallas medianas */
+  }
+
+  .skill-aside {
+    flex-basis: 50%; /* Ocupa la mitad del espacio en pantallas medianas */
+  }
+}
+
+@media screen and (min-width: 1200px) { /* Ajusta este valor a tus necesidades */
+  .skill-presentacion {
+    flex-basis: 70%; /* Ocupa el 70% del espacio en pantallas anchas */
+  }
+
+  .skill-aside {
+    flex-basis: 30%; /* Ocupa el 30% del espacio en pantallas anchas */
   }
 }

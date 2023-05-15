@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   hideLoadingScreen();
-  setTransformOrigin();
+  // setTransformOrigin();
 });
 
 function hideLoadingScreen() {
