@@ -105,10 +105,15 @@ h6 {
 
 .presentation-image {
   background-color: rgba(92, 91, 91, 0.178);
-  width: 10rem; /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 10rem;
   height: 10rem;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio asignado */
+  border-radius: 50%;
+  object-fit: cover; ;
+  margin-bottom: 1rem;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1), 0 0.5px 1px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .presentation-title {
@@ -283,6 +288,17 @@ body.backend-theme.dark-mode {
   margin: 0.5rem;
 }
 
+.skill-button:hover {
+  background-image: linear-gradient(
+    150deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--button-text-color);
+  /*transicion suave muy suave para el efecto*/ 
+  transition: background-image ease-in-out 0.3s; 
+}
+
 button {
   background-color: var(--primary-color);
   color: var(
@@ -368,7 +384,7 @@ button:hover {
   margin: 1rem;
   padding: 0.5rem;
   border-radius: 10px;
-  transition: border-color 0.3s, background-color 0.3s; /* Añadir transición para el background-color */
+  transition: border-color 0.3s, background-color 0.3s 1s; /* Añadir transición para el background-color */
 }
 
 .barra-tareas-icono:hover {
@@ -565,7 +581,7 @@ button:hover {
 }
 
 .nav-animate {
-  animation: nav-animation 0.5s normal;
+  animation: nav-animation 0.5s normal forwards ease-in-out 1.2s; 
 }
 
 .mancha {
@@ -578,10 +594,12 @@ button:hover {
 
 .falling {
   animation: falling 0.5s forwards;
+  animation-delay: 1.2s;
 }
 
 .rising {
   animation: rising 0.5s forwards;
+  animation-delay: 1.2s;
 }
 
 .animated-text-buttom-top {
@@ -589,6 +607,7 @@ button:hover {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
+  animation-delay: 1.2s;
 }
 
 .animated-text-left-right {
@@ -596,6 +615,7 @@ button:hover {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
+  animation-delay: 1.2s;
 }
 
 .animated-text-bounce {
