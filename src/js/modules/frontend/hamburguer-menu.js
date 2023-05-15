@@ -5,7 +5,8 @@ const nav = document.querySelector(nav_name);
 
 hamburguerMenu.addEventListener('click', () => {
   nav.classList.toggle('nav-open');
-  nav.classList.toggle('nav-animate');
+  hamburguerMenu.classList.toggle('active');
+  hamburguerMenu.classList.toggle('open');
   const navPosition = nav.getBoundingClientRect().top + window.pageYOffset;
   window.scrollTo({ top: navPosition, behavior: 'smooth' });
 });

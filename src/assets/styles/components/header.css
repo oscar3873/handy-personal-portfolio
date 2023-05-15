@@ -74,18 +74,47 @@ a:hover::before {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    font-size: 2rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 999;
+    z-index: 10;
   }
+
+  .hamburger:focus {
+    /* Evita que el navegador agregue un borde al elemento */
+    outline: none;
+  }
+  
+  .hamburger__line {
+    width: 1.8rem;
+    height: 0.25rem;
+    background: var(--text-color);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    transform-origin: center;
+  }
+
+
+
+  .hamburger.open .hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(.4rem, .4rem);
+  }
+  
+  .hamburger.open .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(.4rem, -.4rem);
+  }
+
+
 
   .nav {
     display: none;
