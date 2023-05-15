@@ -12,15 +12,15 @@ function hideLoadingScreen() {
   }, 1000);
 }
 
-function setTransformOrigin() {
-  const elements = ["frontend", "backend"];
+// function setTransformOrigin() {
+//   const elements = ["frontend", "backend"];
 
-  elements.forEach((element) => {
-    const el = document.querySelector(`.${element}`);
-    const elBBox = el.getBBox();
-    const elCenterX = elBBox.x + elBBox.width / 2;
-    const elCenterY = elBBox.y + elBBox.height / 2;
+//   elements.forEach((element) => {
+//     const el = document.querySelector(`.${element}`);
+//     const elBBox = el.getBBox();
+//     const elCenterX = elBBox.x + elBBox.width / 2;
+//     const elCenterY = elBBox.y + elBBox.height / 2;
 
-    el.style.transformOrigin = `${elCenterX}px ${elCenterY}px`;
-  });
-}
+//     el.style.transformOrigin = `${elCenterX}px ${elCenterY}px`;
+//   });
+// }
