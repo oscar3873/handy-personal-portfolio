@@ -426,7 +426,6 @@ button:hover {
 
 .skill-presentacion {
   width: 100%;
-  margin: 2rem;
   flex-basis: 100%; /* Ocupa todo el espacio en pantallas pequeñas */
 }
 
@@ -436,7 +435,7 @@ button:hover {
 
 .skill-aside {
   width: 100%;
-  margin: 2rem;
+  margin: 0px 2rem 2rem 2rem;
   flex-basis: 100%; /* Ocupa todo el espacio en pantallas pequeñas */
 }
 
