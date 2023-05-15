@@ -1,4 +1,9 @@
 import { body, themeSwitcher, skillButtons, applyTheme } from '../frontend/theme.js';
+import { mostrarIconos } from "../frontend/components/skillCards.js";
+import { observeElements } from "../frontend/components/scroll_animation.js";
+
+const FRONTEND_THEME = "frontend-theme";
+const BACKEND_THEME = "backend-theme";
 
 let currentTheme = 'frontend-theme';
 let darkMode = false;
@@ -10,10 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const skill = event.target.dataset.skill;
     currentTheme = `${skill}-theme`;
     applyTheme(currentTheme, darkMode);
+    
   }
 
   skillButtons.forEach((button) => {
     button.addEventListener('click', onSkillButtonClick);
+    button.addEventListener("click", () => {
+      const tema =
+        button.textContent.trim().toLowerCase() === "front-end" ? FRONTEND_THEME : BACKEND_THEME;
+      mostrarIconos(tema);
+      observeElements();
+    });
   });
 
   themeSwitcher.addEventListener('click', () => {
@@ -34,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   applyTheme(currentTheme, darkMode);
+  mostrarIconos(currentTheme);
+  observeElements();
 });
 
 //Animaciones

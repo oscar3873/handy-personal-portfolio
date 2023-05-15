@@ -114,8 +114,6 @@ a:hover::before {
     transform: rotate(-45deg) translate(.4rem, -.4rem);
   }
 
-
-
   .nav {
     display: none;
     flex-direction: column;

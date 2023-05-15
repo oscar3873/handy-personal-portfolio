@@ -14,22 +14,28 @@
   flex-basis: 100%;
   margin-bottom: 1rem;
   background-color: var(--transparent-background-color);
+  border-radius: 0.5rem;
 }
 
 .skill-card::after {
   content: "";
   position: absolute;
   top: -1.2rem;
-  right: -1rem;
+  right: -2rem;
   width: 30%;
   height: 30%;
   z-index: -1;
   background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color), transparent);
-  opacity: 0.3;
-  filter: blur(20px);
+  opacity: 0.6;
+  filter: blur(15px);
 }
 
-
+.skill-card:hover {
+  transition-delay: 0s;
+  background-color: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color), transparent);
+  opacity: 1;
+  cursor: pointer;
+}
 
 .skill-icon{
   position: absolute;

@@ -34,7 +34,7 @@ h6 {
   opacity: 0;
   transform: translateX(-10rem);
   transition-property: opacity, transform;
-  transition-duration: 2.5s;
+  transition-duration: 2s;
   transition-timing-function: ease-in-out;
 }
 
@@ -129,6 +129,7 @@ h6 {
 }
 
 .presentation-title {
+  user-select: none;
   font-size: 2rem;
   /* Transición suave para la animación */
   transition: all 0.3s;
@@ -138,6 +139,7 @@ h6 {
 }
 
 .presentation-subtitle {
+  user-select: none;
   font-size: 1.2rem;
   position: relative;
   display: inline-block;
@@ -199,7 +201,7 @@ main {
   --button-text-color: #ffffff; /* Nueva variable para el color del texto en los botones */
   --text-color: #333333;
   --link-color: #e76f51;
-  --transparent-background-color: rgba(158, 153, 153, 0.1);
+  --transparent-background-color: rgba(119, 114, 114, 0.1);
 }
 /* Se definen los colores para el tema oscuro de front-end */
 
@@ -239,7 +241,7 @@ body.frontend-dark-theme {
   --secondary-background-color: #c0ece7;
   --text-color: #333333;
   --link-color: #2a9d8f;
-  --transparent-background-color: rgba(158, 153, 153, 0.1);
+  --transparent-background-color: rgba(119, 114, 114, 0.1);
 }
 
 /* Se definen los colores para el tema oscuro de back-end */
@@ -251,7 +253,7 @@ body.frontend-dark-theme {
   --secondary-background-color: #505050;
   --text-color: #fefae0;
   --link-color: #c591e3;
-  --transparent-background-color: rgba(255, 255, 255, 0.1);
+  --transparent-background-color: rgba(158, 153, 153, 0.1);
 }
 
 /* Aplicar colores y tema para el back-end /
